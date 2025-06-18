@@ -4,7 +4,7 @@ steps:
   # 1. Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/staging-image', '.' ]
-    dir: 'app-code'
+    dir: 'my_app'
 
   # 2. Push the image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
