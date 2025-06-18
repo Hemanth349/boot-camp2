@@ -7,7 +7,6 @@ options:
 steps:
   # Step 1: Build Docker image from my_app directory (must contain Dockerfile)
   - name: 'gcr.io/cloud-builders/docker'
-    dir: 'my_app'
     args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/staging-image', '.' ]
 
   # Step 2: Push Docker image to Google Container Registry
